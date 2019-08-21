@@ -1,0 +1,40 @@
+.news-card {
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 2px;
+  margin-bottom: 45px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .news-title {
+    padding: 20px 0px 20px 0px;
+    margin-bottom: 0px;
+    color: #27a69b;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .news-body {
+    min-height: 200px;
+  }
+}
+
+.col-md-3 {
+  flex: 0 0 31%;
+  max-width: 31%;
+}
+
+.load-more-col {
+  border-radius: 10px;
+  padding: 0px;
+  margin: 10px 0px 10px 0px;
+}
+
+button.load-more-btn {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px 0px 70px 0px;
+  padding: 10px 0px 10px 0px;
+  background-color: white;
+  border: 1px solid rgb(180, 180, 180);
+}
