@@ -2,6 +2,8 @@
   border: 1px solid rgb(180, 180, 180);
   border-radius: 2px;
   margin-bottom: 45px;
+  flex: 0 0 31%;
+  max-width: 31%;
   img {
     width: 100%;
     height: auto;
@@ -18,11 +20,6 @@
   }
 }
 
-.col-md-3 {
-  flex: 0 0 31%;
-  max-width: 31%;
-}
-
 .load-more-col {
   border-radius: 10px;
   padding: 0px;
@@ -37,4 +34,13 @@ button.load-more-btn {
   padding: 10px 0px 10px 0px;
   background-color: white;
   border: 1px solid rgb(180, 180, 180);
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  .news-card {
+    margin-right: 0px !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
 }

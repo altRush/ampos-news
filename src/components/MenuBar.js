@@ -1,14 +1,14 @@
 import React from 'react'
 import { Nav } from 'react-bootstrap'
 
-const MenuBar = props => {
+const MenuBar = ({ menuItem }) => {
   return (
     <Nav activeKey="/home">
-      {props.menuItem.map((menu, i) => {
+      {menuItem.map((menu, i) => {
         return (
           <Nav.Item key={i}>
             <div className="nav-menu">
-              <Nav.Link href={props.menuItem[i]}>{props.menuItem[i]}</Nav.Link>
+              <Nav.Link href={menuItem[i]}>{menuItem[i]}</Nav.Link>
             </div>
           </Nav.Item>
         )

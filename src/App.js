@@ -3,9 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Logo from './components/Logo'
 import MenuBar from './components/MenuBar'
+import NewsList from './components/NewsList'
+import Footer from './components/Footer'
 
 import './App.scss'
-import NewsList from './components/NewsList'
 
 function App() {
   const menuList = ['News', 'Regions', 'Video', 'TV']
@@ -23,6 +24,7 @@ function App() {
         </Row>
         <NewsList />
       </Container>
+      <Footer menuItem={menuList} />
     </div>
   )
 }

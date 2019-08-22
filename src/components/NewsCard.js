@@ -30,7 +30,8 @@ const NewsCard = () => {
               style={(i + 1) % 3 === 0 ? {} : { marginRight: '40px' }}
               key={i}
               className="news-card"
-              md={3}
+              lg={3}
+              md={12}
             >
               <p className="news-title">Title</p>
               <p>
