@@ -43,24 +43,34 @@ const NewsCard = () => {
               lg={3}
               md={12}
             >
-              <p className="news-title">Title</p>
-              <p>
+              <div className="news-image-mobile">
                 <img
                   alt={i}
                   src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
                 />
-              </p>
-              <p className="news-body">{filteredNews[i].body}</p>
-              <p>Updated: 28 July, 2019 12:30</p>
+              </div>
+              <div className="news-block">
+                <div className="news-title">Title</div>
+                <div className="news-image">
+                  <img
+                    alt={i}
+                    src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
+                  />
+                </div>
+                <div className="news-body">{filteredNews[i].body}</div>
+                <div className="news-update">Updated: 28 July, 2019 12:30</div>
+              </div>
             </Col>
           )
         })}
       </Row>
       <Row>
         <Col className="load-more-col">
-          <button className="load-more-btn" onClick={loadMore}>
-            Load More
-          </button>
+          <div className="load-more-col-border">
+            <button className="load-more-btn" onClick={loadMore}>
+              Load More
+            </button>
+          </div>
         </Col>
       </Row>
     </div>

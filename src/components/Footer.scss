@@ -5,9 +5,14 @@
     border-top: 1px solid rgb(180, 180, 180);
     .footer-inner {
       padding: 25px 0px 25px 36px;
+      a.footer-menu-item {
+        color: #27a69b;
+        font-weight: bold;
+      }
     }
+
     .company-signature {
-      width: 78.5%;
+      width: 77%;
       text-align: right;
       padding-right: 20px;
     }
