@@ -17,53 +17,5 @@
       background-color: #27a69b;
       color: white;
     }
-    .menu {
-      display: flex;
-      align-items: center;
-      padding: 0px 3px 0px 0px;
-      .nav {
-        width: 100%;
-        align-items: center;
-        background-color: #019488;
-        .nav-item {
-          width: 15%;
-          .nav-menu {
-            .nav-link {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 50px;
-              margin-right: 2px;
-              background-color: #27a69b;
-              color: white;
-            }
-          }
-        }
-      }
-      .search-bar {
-        width: 40%;
-        ::placeholder {
-          color: white;
-        }
-        display: flex;
-        align-items: center;
-
-        height: 50px;
-        label {
-          margin-bottom: 0px;
-        }
-        input,
-        input:focus {
-          height: 34px;
-          border-radius: 10px;
-          border: 1px;
-          width: 100%;
-          padding: 0px 10px;
-          margin: 0px 10px;
-          background-color: #27a69b;
-          color: white;
-        }
-      }
-    }
   }
 }

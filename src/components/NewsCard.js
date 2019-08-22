@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Row, Col } from 'react-bootstrap'
 
+import { useStateValue } from '../hooks/state'
+
 import './NewsCard.scss'
 
 const NewsCard = () => {
+  const [{ text }] = useStateValue()
+
   const [newsData, setNewsData] = useState([])
   const [postLimit, setPostLimit] = useState(15)
 
@@ -21,10 +25,16 @@ const NewsCard = () => {
       })
   }, [postLimit])
 
-  return newsData.length ? (
+  const filteredNews = text.length
+    ? newsData.filter(news => {
+        return news.body.toLowerCase().includes(text.toLowerCase())
+      })
+    : newsData
+
+  return filteredNews.length ? (
     <div>
       <Row>
-        {newsData.map((news, i) => {
+        {filteredNews.map((news, i) => {
           return (
             <Col
               style={(i + 1) % 3 === 0 ? {} : { marginRight: '40px' }}
@@ -40,7 +50,7 @@ const NewsCard = () => {
                   src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
                 />
               </p>
-              <p className="news-body">{newsData[i].body}</p>
+              <p className="news-body">{filteredNews[i].body}</p>
               <p>Updated: 28 July, 2019 12:30</p>
             </Col>
           )
@@ -55,7 +65,7 @@ const NewsCard = () => {
       </Row>
     </div>
   ) : (
-    <div>Loading...</div>
+    <div className="no-matched-search">No matched search...</div>
   )
 }
 
