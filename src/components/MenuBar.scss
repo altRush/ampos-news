@@ -49,3 +49,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 992px) {
+  .menu {
+    padding: 0px !important;
+    .nav-menu {
+      display: none !important;
+    }
+  }
+
+  .search-bar {
+    background-color: rgb(210, 210, 210) !important;
+    width: 100% !important;
+    ::placeholder {
+      color: #aaaaaa !important;
+    }
+    input,
+    input:focus {
+      background-color: white !important;
+      color: #aaaaaa !important;
+      width: 96% !important;
+    }
+  }
+}

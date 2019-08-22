@@ -23,10 +23,10 @@ function App() {
       <div className="App">
         <Container>
           <Row>
-            <Col className="logo-container" md={2} sm={12}>
+            <Col className="logo-container" lg={2}>
               <Logo />
             </Col>
-            <Col className="menu justify-content-end" md={10}>
+            <Col className="menu justify-content-end" lg={10} md={12}>
               <MenuBar menuItem={menuList} />
             </Col>
           </Row>
