@@ -1,27 +1,28 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-
 import './Footer.scss'
 
-const Footer = props => {
+const Footer = ({ menuItem }) => {
   return (
     <Row className="footer-container">
       <Col className="footer">
         <div className="footer-inner">
           <Row>
-            {props.menuItem.map((menu, i) => {
+            {/* Receive menu items from App component and iterate through to render each one */}
+            {menuItem.map((menu, i) => {
               return (
                 <div key={i}>
                   <a
-                    href={props.menuItem[i]}
+                    href={menuItem[i]}
                     style={1 === i + 1 ? {} : { paddingLeft: '15px' }}
                     className="footer-menu-item"
                   >
-                    {props.menuItem[i]}
+                    {menuItem[i]}
                   </a>
+                  {/* Render separator for each items */}
                   <span
                     style={
-                      props.menuItem.length > i + 1
+                      menuItem.length > i + 1
                         ? {
                             borderRight: '2px solid rgb(180, 180, 180)',
                             padding: '0px 15px 0px 0px'

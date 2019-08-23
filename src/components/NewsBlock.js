@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './NewsBlock.scss'
 
 const NewsImage = ({ i, filteredNews }) => {

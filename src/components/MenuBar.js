@@ -5,13 +5,17 @@ import { Nav } from 'react-bootstrap'
 import './MenuBar.scss'
 
 const MenuBar = ({ menuItem }) => {
+  // Connect search input with global state
   const [text, dispatch] = useStateValue()
+  // Create component search text state
   const [searchedText, setSearchedText] = useState('')
 
+  // Set search text upon each input changes
   const onChange = e => {
     setSearchedText(e.target.value)
   }
 
+  // Dispatch the search text load to the reducer to further processing
   const onSubmit = e => {
     e.preventDefault()
     dispatch({
@@ -30,6 +34,7 @@ const MenuBar = ({ menuItem }) => {
         </div>
       </Nav>
       <Nav activeKey="/home">
+        {/* Iterate through each menu items in order to render them in the navbar */}
         {menuItem.map((menu, i) => {
           return (
             <Nav.Item key={i}>

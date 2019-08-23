@@ -1,9 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-
 import { StateProvider } from './hooks/state'
-import reducer from './hooks/reducer'
 
+import reducer from './hooks/reducer'
 import Logo from './components/Logo'
 import MenuBar from './components/MenuBar'
 import NewsList from './components/NewsList'
@@ -12,8 +11,10 @@ import Footer from './components/Footer'
 import './App.scss'
 
 function App() {
+  // Define all menu items
   const menuList = ['News', 'Regions', 'Video', 'TV']
 
+  // Initiate search text's state as empty then pass through the StateProvider
   const initialState = {
     text: ''
   }
