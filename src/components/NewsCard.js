@@ -5,6 +5,9 @@ import { Row, Col } from 'react-bootstrap'
 import { useStateValue } from '../hooks/state'
 
 import './NewsCard.scss'
+import MobileNewsImage from './MobileNewsImage'
+import NewsBlock from './NewsBlock'
+import LoadMore from './LoadMore'
 
 const NewsCard = () => {
   const [{ text }] = useStateValue()
@@ -43,35 +46,14 @@ const NewsCard = () => {
               lg={3}
               md={12}
             >
-              <div className="news-image-mobile">
-                <img
-                  alt={i}
-                  src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
-                />
-              </div>
-              <div className="news-block">
-                <div className="news-title">Title</div>
-                <div className="news-image">
-                  <img
-                    alt={i}
-                    src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
-                  />
-                </div>
-                <div className="news-body">{filteredNews[i].body}</div>
-                <div className="news-update">Updated: 28 July, 2019 12:30</div>
-              </div>
+              <MobileNewsImage i={i} />
+              <NewsBlock i={i} filteredNews={filteredNews[i].body} />
             </Col>
           )
         })}
       </Row>
       <Row>
-        <Col className="load-more-col">
-          <div className="load-more-col-border">
-            <button className="load-more-btn" onClick={loadMore}>
-              Load More
-            </button>
-          </div>
-        </Col>
+        <LoadMore loadMore={loadMore} />
       </Row>
     </div>
   ) : (

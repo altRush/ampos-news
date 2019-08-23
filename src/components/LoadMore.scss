@@ -1,0 +1,31 @@
+.load-more-col {
+  border-radius: 10px;
+  padding: 0px;
+  .load-more-col-border {
+    button.load-more-btn {
+      outline: none;
+      border-radius: 10px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px 0px 70px 0px;
+      padding: 10px 0px 10px 0px;
+      background-color: white;
+      border: 1px solid rgb(180, 180, 180);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .load-more-col {
+    margin: 0px !important;
+
+    .load-more-col-border {
+      padding: 10px 5px;
+      background-color: #f2f2f4;
+    }
+  }
+
+  button.load-more-btn {
+    margin: 0px !important;
+  }
+}

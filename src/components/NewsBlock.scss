@@ -1,0 +1,19 @@
+@media only screen and (max-width: 1200px) {
+  .news-block {
+    float: right;
+    width: 50%;
+    .news-title {
+      padding-bottom: 10px !important;
+    }
+    .news-image {
+      display: none !important;
+    }
+    .news-body {
+      min-height: auto !important;
+    }
+    .news-update {
+      padding: 10px 0px;
+      font-size: 80%;
+    }
+  }
+}

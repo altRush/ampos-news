@@ -28,6 +28,7 @@
   }
   .search-bar {
     width: 40%;
+
     ::placeholder {
       color: white;
     }
@@ -42,6 +43,7 @@
       width: 100%;
       input,
       input:focus {
+        outline: none;
         height: 34px;
         border-radius: 10px;
         border: 1px;
@@ -85,7 +87,7 @@
         color: white;
         font-weight: bold;
         font-size: 130%;
-        margin-left: -3%;
+        margin-left: -4%;
       }
       .news-hamburger-menu {
         margin: 0px 15px 0px 0px;

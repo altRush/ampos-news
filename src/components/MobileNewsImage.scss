@@ -1,0 +1,12 @@
+.news-image-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .news-image-mobile {
+    display: block !important;
+    float: left;
+    width: 46%;
+    margin-right: 10px;
+  }
+}
