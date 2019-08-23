@@ -33,7 +33,7 @@ const NewsCard = () => {
 
   return filteredNews.length ? (
     <div>
-      <Row>
+      <Row className="news-container">
         {filteredNews.map((news, i) => {
           return (
             <Col

@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   padding: 0px 3px 0px 0px;
+
   .nav {
     width: 100%;
     align-items: center;
     background-color: #019488;
+    border: 2px solid #019488;
     .nav-item {
       width: 15%;
       .nav-menu {
@@ -20,6 +22,9 @@
         }
       }
     }
+  }
+  .mobile-nav {
+    display: none;
   }
   .search-bar {
     width: 40%;
@@ -53,8 +58,40 @@
 @media only screen and (max-width: 992px) {
   .menu {
     padding: 0px !important;
-    .nav-menu {
-      display: none !important;
+    flex-direction: column;
+
+    .nav {
+      border: 0px !important;
+      .nav-menu {
+        display: none !important;
+      }
+    }
+
+    .mobile-nav {
+      display: flex !important;
+      justify-content: space-between;
+      width: 100%;
+      .mobile-logo {
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        margin: 4px 0px 4px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+      }
+      .news-title {
+        color: white;
+        font-weight: bold;
+        font-size: 130%;
+        margin-left: -3%;
+      }
+      .news-hamburger-menu {
+        margin: 0px 15px 0px 0px;
+        font-size: 140%;
+        color: white;
+      }
     }
   }
 

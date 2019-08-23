@@ -21,28 +21,37 @@ const MenuBar = ({ menuItem }) => {
   }
 
   return (
-    <Nav activeKey="/home">
-      {menuItem.map((menu, i) => {
-        return (
-          <Nav.Item key={i}>
-            <div className="nav-menu">
-              <Nav.Link href={menuItem[i]}>{menuItem[i]}</Nav.Link>
-            </div>
-          </Nav.Item>
-        )
-      })}
-      <div className="search-bar">
-        <form onSubmit={e => onSubmit(e)}>
-          <input
-            name="name"
-            type="search"
-            className="fa fa-search"
-            placeholder="&#61442; &nbsp; Search"
-            onChange={onChange}
-          />
-        </form>
-      </div>
-    </Nav>
+    <>
+      <Nav className="mobile-nav">
+        <div className="mobile-logo">Logo</div>
+        <div className="news-title">News</div>
+        <div className="news-hamburger-menu">
+          <i class="fa fa-bars" aria-hidden="true" />
+        </div>
+      </Nav>
+      <Nav activeKey="/home">
+        {menuItem.map((menu, i) => {
+          return (
+            <Nav.Item key={i}>
+              <div className="nav-menu">
+                <Nav.Link href={menuItem[i]}>{menuItem[i]}</Nav.Link>
+              </div>
+            </Nav.Item>
+          )
+        })}
+        <div className="search-bar">
+          <form onSubmit={e => onSubmit(e)}>
+            <input
+              name="name"
+              type="search"
+              className="fa fa-search"
+              placeholder="&#61442; &nbsp; Search"
+              onChange={onChange}
+            />
+          </form>
+        </div>
+      </Nav>
+    </>
   )
 }
 
