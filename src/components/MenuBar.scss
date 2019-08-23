@@ -34,7 +34,7 @@
     }
     display: flex;
     align-items: center;
-
+    justify-content: center;
     height: 50px;
     label {
       margin-bottom: 0px;
@@ -47,9 +47,9 @@
         height: 34px;
         border-radius: 10px;
         border: 1px;
-        width: 94%;
+        width: 95%;
         padding: 0px 10px;
-        margin: 0px 10px;
+        margin: 8px 10px;
         background-color: #27a69b;
         color: white;
       }
@@ -108,6 +108,7 @@
       background-color: white !important;
       color: #aaaaaa !important;
       width: 96% !important;
+      padding: 10px !important;
     }
   }
 }

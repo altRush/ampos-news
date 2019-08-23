@@ -9,7 +9,7 @@ const NewsImage = ({ i, filteredNews }) => {
       <div className="news-image">
         <img
           alt={i}
-          src="https://dummyimage.com/600x400/555/fff.jpg&text=Ampos+News"
+          src="https://dummyimage.com/340x160/555/fff.jpg&text=Ampos+News"
         />
       </div>
       <div className="news-body">{filteredNews}</div>
